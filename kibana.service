@@ -1,0 +1,14 @@
+[Unit]
+Description=open source data visualization platform
+After=network.target network-online.target elasticsearch.service
+Wants=network-online.target elasticsearch.service
+
+[Service]
+Type=simple
+PIDFile=/var/run/kibana/running.pid
+EnvironmentFile=/etc/sysconfig/kibana
+ExecStart=/usr/bin/node /usr/share/kibana/bin/kibana.js
+
+[Install]
+WantedBy=multi-user.target
+
