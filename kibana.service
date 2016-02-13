@@ -5,11 +5,11 @@ Wants=network-online.target elasticsearch.service
 
 [Service]
 Type=simple
-User=nobody
-Group=nobody
+User=elasticsearch
+Group=elasticsearch
 PIDFile=/var/run/kibana/running.pid
 EnvironmentFile=/etc/sysconfig/kibana
-ExecStart=/usr/bin/node /usr/share/kibana/bin/kibana.js
+ExecStart=/opt/kibana/node/bin/node /opt/kibana/src/cli
 
 [Install]
 WantedBy=multi-user.target
