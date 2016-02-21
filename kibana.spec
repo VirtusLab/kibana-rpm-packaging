@@ -1,5 +1,5 @@
 Name: kibana
-Version: 4.4.0
+Version: 4.4.1
 Release: 1
 Summary: open source data visualization platform 
 License: see /usr/share/doc/kibana/LICENSE
